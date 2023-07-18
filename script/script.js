@@ -7,6 +7,9 @@ var numberButtons = document.querySelectorAll(".btn.number");
 // Get all the action buttons
 var actionButtons = document.querySelectorAll(".btn.action");
 
+//Get all the action cancel
+var cancel = document.getElementById("cancel")
+
 // Get the equal button
 var equalButton = document.querySelector(".equalto-container");
 
@@ -23,6 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             input.value += " " + button.innerText + " ";
         });
+    });
+
+    cancel.addEventListener("click", function () {
+        input.value = "";
     });
 
     // Add click event listener to equal button
